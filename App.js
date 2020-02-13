@@ -27,6 +27,12 @@ export default () => {
     calc();
   }, [pct]);
 
+  useEffect(() => {
+    if(bill == "") {
+      setTip(0)
+    }
+  }, [bill])
+
   return (
     <Page>
       <HeaderText>Calculadora de Gorjeta</HeaderText>
